@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <button class="darkmode-toggle" id="darkmode-toggle">🌙 다크모드</button>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="메시지를 입력하세요...">
+            <button id="send-btn">전송</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+    // 다크모드 토글 스크립트
+    document.getElementById('darkmode-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('darkmode');
+        this.textContent = document.body.classList.contains('darkmode') ? '☀️ 라이트모드' : '🌙 다크모드';
+    });
+    </script>
+</body>
+</html>
